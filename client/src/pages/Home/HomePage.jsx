@@ -9,7 +9,7 @@ import About from '../../components/HomePage/About';
 import Nirf from '../../components/HomePage/Nirf';
 
 const HomePage = () => {
-  document.title = 'Tesla NIT Patna | Home';
+  document.title = 'APSA | Home';
 
   return (
     <div className='pt-16 bg-black'>

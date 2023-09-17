@@ -3,7 +3,7 @@ import Heading from '../../components/Headings/Heading'
 
 const About = () => {
 
-  document.title = 'Tesla NIT Patna | About';
+  document.title = 'APSA | About';
 
   return (
     <div className='pt-16 min-h-screen'>
