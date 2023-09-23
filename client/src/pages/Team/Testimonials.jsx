@@ -105,9 +105,9 @@ const TestimonialCard = ({ data }) => {
                             </div>
                         </div>
                         <div>
-                            <h1 className='text-white font-bold text-base'>{data.name} <span>
+                            <h1 className='text-white text-left font-bold text-base'>{data.name} <span>
                                 (1998)</span></h1>
-                            <p className='text-gray-400 text-sm'>{data.designation}</p>
+                            <p className='text-gray-400 text-left text-sm'>{data.designation}</p>
                         </div>
                     </div>
                 </div>
