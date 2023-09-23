@@ -28,7 +28,7 @@ const DirectorDesk = () => {
               <img
                 src="https://www.kaizenaiimspatna.com/director-gk-pal.jpg"
                 // src={director}
-                className="w-96 rounded-full shadow-lg dark:shadow-black/30"
+                className="lg:w-96 md:w-80 w-72 rounded-full shadow-lg dark:shadow-black/30"
               />
             </div>
           </div>

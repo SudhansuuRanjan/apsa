@@ -7,6 +7,7 @@ import Events from '../../components/HomePage/Events';
 import DirectorDesk from '../../components/HomePage/DirectorDesk';
 import About from '../../components/HomePage/About';
 import Nirf from '../../components/HomePage/Nirf';
+import Gallery from '../../components/HomePage/Gallery';
 
 const HomePage = () => {
   document.title = 'APSA | Home';
@@ -34,6 +35,7 @@ const HomePage = () => {
       <About/>
 
       <div className='lg:mx-[4rem] md:mx-[3rem] mx-[2rem]'>
+        <Gallery />
         <Faq />
       </div>
     </div>

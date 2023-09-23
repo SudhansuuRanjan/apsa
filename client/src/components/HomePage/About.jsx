@@ -25,11 +25,11 @@ const About = () => {
             </ul>
           </div>
           <div className="mb-12 md:mb-0">
-            <div className="mb-12 w-96 h-96 rounded-full overflow-hidden flex items-center justify-center shadow-lg dark:shadow-black/30">
+            <div className="mb-12 lg:w-96 md:w-80 w-72 rounded-full overflow-hidden flex items-center justify-center shadow-lg dark:shadow-black/30">
               <img
                 src="https://media.istockphoto.com/id/1211161734/vector/conversation-with-medic-about-checkup-results.jpg?s=612x612&w=0&k=20&c=XSVH-r0B1hR8g5hhEShz4VWc1DOiMt_BBmEe9AlS5_Q="
                 // src={director}
-                className="h-96"
+                className="lg:w-96 md:w-80 w-72 lg:h-96 md:h-80 h-72"
               />
             </div>
           </div>

@@ -28,18 +28,22 @@ const Nirf = () => {
   return (
     <div className='py-28'>
       <div data-aos="zoom-in" className='flex items-center justify-center flex-col gap-5'>
-        <img src="images/nirf.png" alt="NIRF" className='h-28' />
+        <img src="images/nirf.png" alt="NIRF" className='lg:h-28 md:h-24 h-20' />
         <h1 className='text-3xl font-medium max-w-[18rem] text-center py-5'>
           <span className='text-sky-500 font-bold'>27TH</span> BEST MEDICAL COLLEGE IN INDIA
         </h1>
       </div>
-      <div data-aos="fade-up" className='m-auto flex items-center flex-col justify-center pt-16'>
-        <div className='flex'>
+      <div data-aos="fade-up" className='m-auto flex items-center flex-col justify-center pt-16 lg:px-32 md:px-12 px-8'>
+        <div className="grid text-gray-300 w-full mb-0 text-center border border-t-gray-500 border-l-gray-500 border-b-0 border-r-0 lg:grid-cols-[minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr)] md:lg:grid-cols-[minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr)] grid-cols-[minmax(100px,_1fr),minmax(100px,_1fr)]">
           {
             table.map((item, index) => (
-              <div  key={index} className={`flex flex-col items-center justify-between py-2.5  w-36 text-center ${table.length - 1 > index && "border-r-2"}`}>
-                <p className='text-2xl font-bold text-sky-500 pb-4'>{item.name}</p>
-                <p className='text-2xl font-medium border-t-2  w-full pt-4'>{item.score}</p>
+              // <div key={index} className={`flex flex-col items-center justify-between py-2.5  w-36 text-center ${table.length - 1 > index && "border-r-2"}`}>
+              //   <p className='text-2xl font-bold text-sky-500 pb-4'>{item.name}</p>
+              //   <p className='text-2xl font-medium border-t-2  w-full pt-4'>{item.score}</p>
+              // </div>
+              <div className="py-5 px-4 border border-b-gray-500 border-r-gray-500 border-t-0 border-l-0">
+                <div className="text-3xl font-bold">{item.score}</div>
+                <div className='text-sky-500'>{item.name}</div>
               </div>
             ))
           }
