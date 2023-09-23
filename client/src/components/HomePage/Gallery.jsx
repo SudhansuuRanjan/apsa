@@ -42,7 +42,7 @@ const Gallery = () => {
     return (
         <div className='py-24'>
             <Heading1 details={"Glimpses of our events and activities."} text1={"Our"} text2={"Gallery"} />
-            <div className='mt-16'>
+            <div data-aos="fade-up" className='mt-16'>
                 {isLoading ? <div className="flex justify-center items-center h-[10rem] w-full"><Loader /></div> : isError ? <p>Something went wrong.</p> : <Carousel
                     swipeable={true}
                     draggable={false}
@@ -74,10 +74,10 @@ const Gallery = () => {
                 </Carousel>}
             </div>
 
-            <div className="flex items-center justify-center">
+            <div data-aos="fade-up" className="flex items-center justify-center">
                 <Link to="/gallery" className='m-auto'>
-                <button className='bg-sky-600 px-6 py-2 text-white rounded-xl mt-16 hover:bg-black border-sky-600 border hover:text-sky-600'>Explore Gallery</button>
-            </Link>
+                    <button className='bg-sky-600 px-8 py-2.5 text-white rounded-3xl mt-16 hover:bg-black border-sky-600 border hover:text-sky-600'>Explore Gallery</button>
+                </Link>
             </div>
         </div>
     )

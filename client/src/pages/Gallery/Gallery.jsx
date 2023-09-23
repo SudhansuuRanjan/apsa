@@ -40,7 +40,7 @@ const Gallery = () => {
                             data.map((img, index) => {
                                 return (
                                     <div key={index} className="bg-gray-900 bg-opacity-40 rounded-[1rem] cursor-pointer">
-                                        <img className="rounded-[1rem]" height={1080} width={1920} loading="lazy" src={img.url} alt="gallery-photo" onClick={() => {
+                                        <img data-aos="zoom-in" className="rounded-[1rem]" height={1080} width={1920} loading="lazy" src={img.url} alt="gallery-photo" onClick={() => {
                                             setCurrentImg(index);
                                             setModal(true);
                                         }} />
