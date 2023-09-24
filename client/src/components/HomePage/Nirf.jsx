@@ -1,4 +1,5 @@
 import React from 'react'
+import CountUp from 'react-countup';
 
 const Nirf = () => {
 
@@ -37,12 +38,8 @@ const Nirf = () => {
         <div className="grid text-gray-300 w-full mb-0 text-center border border-t-gray-500 border-l-gray-500 border-b-0 border-r-0 lg:grid-cols-[minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr)] md:lg:grid-cols-[minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr)] grid-cols-[minmax(100px,_1fr),minmax(100px,_1fr)]">
           {
             table.map((item, index) => (
-              // <div key={index} className={`flex flex-col items-center justify-between py-2.5  w-36 text-center ${table.length - 1 > index && "border-r-2"}`}>
-              //   <p className='text-2xl font-bold text-sky-500 pb-4'>{item.name}</p>
-              //   <p className='text-2xl font-medium border-t-2  w-full pt-4'>{item.score}</p>
-              // </div>
               <div className="py-5 px-4 border border-b-gray-500 border-r-gray-500 border-t-0 border-l-0">
-                <div className="text-3xl font-bold">{item.score}</div>
+                <div className="text-3xl font-bold"><CountUp end={item.score} enableScrollSpy={true} /></div>
                 <div className='text-sky-500'>{item.name}</div>
               </div>
             ))

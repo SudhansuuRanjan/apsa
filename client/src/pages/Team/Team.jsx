@@ -4,7 +4,6 @@ import End from "../../utils/End";
 
 
 const Team = () => {
-
     const members = [
         {
             name: "Dr. Umesh Bhadani",
@@ -106,7 +105,7 @@ const Team = () => {
                 <div className='my-16 lg:px-20 md:px-12 px-8 flex items-center justify-center'>
                     <div className='grid text-gray-300 text-center lg:grid-cols-[minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr)] md:grid-cols-[minmax(100px,_1fr),minmax(100px,_1fr)] grid-cols-[minmax(100px,_1fr)] gap-10'>
                         {
-                           testimonials.map((testimonial, index) => (
+                            testimonials.map((testimonial, index) => (
                                 <TestimonialCard data={testimonial} key={index} />
                             ))
                         }
@@ -114,7 +113,7 @@ const Team = () => {
                 </div>
             </div>
 
-            <End/>
+            <End />
 
         </div>
     )

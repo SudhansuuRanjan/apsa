@@ -45,24 +45,23 @@ const NavBar = () => {
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink style={{ textDecoration: "none" }} to="/news">
+                            <NavLink style={{ textDecoration: "none" }} to="/activities">
                                 {({ isActive, isPending }) => (
-                                    <span className={`hover:underline underline-offset-4 decoration-pink-500 ${isActive ? "text-sky-500 font-medium" : "text-white"}`}>News</span>
+                                    <span className={`hover:underline underline-offset-4 decoration-pink-500 ${isActive ? "text-sky-500 font-medium" : "text-white"}`}>Activities</span>
                                 )}
                             </NavLink>
                         </li>
                         <li>
-                            <NavLink style={{ textDecoration: "none" }} to="/projects">
+                            <NavLink style={{ textDecoration: "none" }} to="/committee">
                                 {({ isActive, isPending }) => (
-                                    <span className={`hover:underline underline-offset-4 decoration-pink-500 ${isActive ? "text-sky-500 font-medium" : "text-white"}`}>Projects</span>
+                                    <span className={`hover:underline underline-offset-4 decoration-pink-500 ${isActive ? "text-sky-500 font-medium" : "text-white"}`}>Committee</span>
                                 )}
                             </NavLink>
                         </li>
-
                         <li>
-                            <NavLink style={{ textDecoration: "none" }} to="/team">
+                            <NavLink style={{ textDecoration: "none" }} to="/blogs">
                                 {({ isActive, isPending }) => (
-                                    <span className={`hover:underline underline-offset-4 decoration-pink-500 ${isActive ? "text-sky-500 font-medium" : "text-white"}`}>Team</span>
+                                    <span className={`hover:underline underline-offset-4 decoration-pink-500 ${isActive ? "text-sky-500 font-medium" : "text-white"}`}>Blogs</span>
                                 )}
                             </NavLink>
                         </li>

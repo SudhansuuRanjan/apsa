@@ -5,6 +5,8 @@ import Blog from './Newsletter/Blog';
 import Newsletter from './Newsletter/Newsletter';
 import Gallery from './Gallery/Gallery';
 import Team from './Team/Team';
+import Activities from './Activities/Activities';
+import Committee from './Comittee/Committee';
 
 export {
     Home,
@@ -13,5 +15,7 @@ export {
     Blog,
     Newsletter,
     Gallery,
-    Team
+    Team,
+    Activities,
+    Committee
 };
