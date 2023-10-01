@@ -41,7 +41,7 @@ const GoverningBody = () => {
         <div className='py-24'>
             <Heading1 details={"Meet our hardworking team leaders and members."} text1={"Governing"} text2={"Body"} />
             <div className='my-16'>
-                <div className='flex flex-wrap justify-evenly'>
+                <div className='flex flex-wrap justify-evenly gap-y-10'>
                     {
                         members.map((member, index) => (
                             <TeamCard member={member} key={index} />

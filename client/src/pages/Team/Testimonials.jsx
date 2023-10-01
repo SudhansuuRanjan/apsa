@@ -93,7 +93,7 @@ const Testimonials = () => {
 const TestimonialCard = ({ data }) => {
     return (
         <div data-aos="zoom-in" className='w-[100%]'>
-            <div className='flex items-center overflow-hidden rounded-xl border border-gray-700  border-b-8 border-b-sky-600 hover:border-b-sky-500 p-7 hover:border-gray-600 hover:scale-[102%] transition-all delay-75 ease-in hover:bg-gray-800'>
+            <div className='flex items-center overflow-hidden rounded-xl border bg-gray-950 border-gray-700  border-b-8 border-b-sky-600 hover:border-b-sky-500 p-7 hover:border-gray-600 hover:scale-[102%] transition-all delay-75 ease-in hover:bg-gray-900'>
                 <div className='flex flex-col'>
                     <FaQuoteLeft className='text-sky-400' size={41} />
                     <p className='text-white font-medium mt-3'>{data.message}</p>

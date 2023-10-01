@@ -20,7 +20,7 @@ const NavBar = () => {
     window.addEventListener("scroll", changeNavbarColor);
 
     return (
-        <div className="fixed top-0 z-10 w-full">
+        <div className="fixed top-0 z-50 w-full">
         <div className={`w-[100%] fixed items-center justify-center ${colorChange && " bg-black transition-all delay-100  ease-in-out bg-opacity-20 backdrop-blur-md border-gray-800 shadow-lg"}`}>
             <div className="flex items-center justify-between lg:w-[65rem] md:w-[100%] px-4 md:px-3 py-4 m-auto text-lg">
                 <div className="flex items-center">

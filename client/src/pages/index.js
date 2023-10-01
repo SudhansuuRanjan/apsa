@@ -7,6 +7,9 @@ import Gallery from './Gallery/Gallery';
 import Team from './Team/Team';
 import Activities from './Activities/Activities';
 import Committee from './Comittee/Committee';
+import Academics from './Academics/Academics';
+import Publications from './Publications/Publications';
+import StudentCell from './StudentCell/StudentCell';
 
 export {
     Home,
@@ -17,5 +20,8 @@ export {
     Gallery,
     Team,
     Activities,
-    Committee
+    Committee,
+    Academics,
+    Publications,
+    StudentCell
 };

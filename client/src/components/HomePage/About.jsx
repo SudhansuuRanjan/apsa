@@ -6,8 +6,8 @@ import { BsArrowUpRight } from 'react-icons/bs'
 const About = () => {
   return (
     <div className='pt-24'>
-        <div className="grid bg-gray-900 text-white p-20 px-10 pt-10  gap-6 text-center md:grid-cols-3 lg:gap-12">
-          <div className="mb-12 md:mb-0">
+        <div className="grid bg-gray-950 text-white px-10 p-20  gap-6 text-center md:grid-cols-3 lg:gap-12">
+          <div data-aos="zoom-in" className="mb-12 md:mb-0">
             <h1 className="mb-2.5 mt-10 lg:text-left md:text-left text-center text-white lg:text-5xl md:text-4xl text-4xl font-bold leading-tight">
               About <span className='text-sky-500'>APSA</span>
             </h1>
@@ -24,8 +24,8 @@ const About = () => {
               </h6>
             </ul>
           </div>
-          <div className="mb-12 md:mb-0">
-            <div className="mb-12 lg:w-96 md:w-80 w-72 rounded-full overflow-hidden flex items-center justify-center shadow-lg dark:shadow-black/30">
+          <div data-aos="fade-up" className="mb-12 md:mb-0 flex items-center justify-center">
+            <div className="mb-12 lg:w-96 lg:h-96 md:w-80 md:h-80 w-72 h-72 rounded-full overflow-hidden flex items-center justify-center shadow-lg dark:shadow-black/30">
               <img
                 src="https://media.istockphoto.com/id/1211161734/vector/conversation-with-medic-about-checkup-results.jpg?s=612x612&w=0&k=20&c=XSVH-r0B1hR8g5hhEShz4VWc1DOiMt_BBmEe9AlS5_Q="
                 // src={director}
@@ -33,7 +33,7 @@ const About = () => {
               />
             </div>
           </div>
-          <div className="mb-12 md:mb-0">
+          <div data-aos="zoom-in" className="mb-12 md:mb-0">
             <FaQuoteLeft size={38} className="text-sky-400 mb-6" />
             <p className="mb-10 text-lg lg:text-left md:text-left text-justify">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quam voluptas earum voluptatem incidunt eveniet rerum? Facilis distinctio porro labore debitis praesentium vel odit ullam numquam, deleniti maxime eum dolor, at magni, ut incidunt adipisci sint omnis corrupti possimus ratione id. Blanditiis repellendus reprehenderit ducimus voluptas. Asperiores, voluptas.

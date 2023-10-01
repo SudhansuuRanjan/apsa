@@ -38,7 +38,7 @@ const Nirf = () => {
         <div className="grid text-gray-300 w-full mb-0 text-center border border-t-gray-500 border-l-gray-500 border-b-0 border-r-0 lg:grid-cols-[minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr)] md:lg:grid-cols-[minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr),minmax(100px,_1fr)] grid-cols-[minmax(100px,_1fr),minmax(100px,_1fr)]">
           {
             table.map((item, index) => (
-              <div className="py-5 px-4 border border-b-gray-500 border-r-gray-500 border-t-0 border-l-0">
+              <div key={index} className="py-5 px-4 border border-b-gray-500 border-r-gray-500 border-t-0 border-l-0">
                 <div className="text-3xl font-bold"><CountUp end={item.score} enableScrollSpy={true} /></div>
                 <div className='text-sky-500'>{item.name}</div>
               </div>
