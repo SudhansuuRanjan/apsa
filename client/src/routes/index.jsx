@@ -17,6 +17,7 @@ const Committee = lazy(() => import('../pages/Comittee/Committee'));
 const Academics = lazy(() => import('../pages/Academics/Academics'));
 const Publications = lazy(() => import('../pages/Publications/Publications'));
 const StudentCell = lazy(() => import('../pages/StudentCell/StudentCell'));
+const Polls = lazy(() => import('../pages/Polls/Polls'));
 
 const AppRoutes = () => {
   return (
@@ -36,6 +37,7 @@ const AppRoutes = () => {
           <Route path="/academics" element={<Suspense fallback={<Loader />} ><Academics /></Suspense>} />
           <Route path="/publications" element={<Suspense fallback={<Loader />} ><Publications /></Suspense>} />
           <Route path="/student-cell" element={<Suspense fallback={<Loader />} ><StudentCell /></Suspense>} />
+          <Route path="/polls" element={<Suspense fallback={<Loader />} ><Polls /></Suspense>} />
         </Route>
       </Routes>
     </Router>

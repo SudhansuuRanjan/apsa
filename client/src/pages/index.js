@@ -10,6 +10,7 @@ import Committee from './Comittee/Committee';
 import Academics from './Academics/Academics';
 import Publications from './Publications/Publications';
 import StudentCell from './StudentCell/StudentCell';
+import Polls from './Polls/Polls';
 
 export {
     Home,
@@ -23,5 +24,6 @@ export {
     Committee,
     Academics,
     Publications,
-    StudentCell
+    StudentCell,
+    Polls
 };
