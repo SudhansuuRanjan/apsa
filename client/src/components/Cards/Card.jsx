@@ -5,6 +5,7 @@ import CountUp from 'react-countup';
 import { deleteDocument } from '../../services/document';
 import { deleteFile } from '../../services/file';
 import { FaEdit, FaTrash } from "react-icons/fa"
+import { formatDate } from '../../utils/Date';
 
 const Card1 = ({ title, description, image }) => {
     return (
@@ -94,7 +95,7 @@ const HighlightCard = ({ type, data, icon }) => {
 
 const BlogCard = ({ data, isAdmin, refetch }) => {
     return (
-        <Link data-aos="fade-up" style={{ textDecoration: 'none' }} to={isAdmin ? "" : `/blog/${data.$id}`} className='rounded-2xl w-[20rem] p-4 hover:scale-[102%] z-0 hover:z-[5]  transition-all delay-[30ms] ease-in-out border border-gray-900 hover:border-gray-800 bg-[#0c0c0c]'>
+        <Link data-aos="fade-up" style={{ textDecoration: 'none' }} to={isAdmin ? "" : `/blog/${data.$id}`} className='rounded-2xl w-[20rem] p-4 px-5 hover:scale-[102%] z-0 hover:z-[5]  transition-all delay-[30ms] ease-in-out hover:border-gray-800 bg-[#121212] relative my-5'>
             {isAdmin && <div className='absolute z-10 right-5 top-1'>
                 <Link to={`/edit/news/${data.$id}`} > <button className='text-blue-500 p-2'><FaEdit size={20} /></button></Link>
                 <button onClick={async () => {
@@ -108,26 +109,31 @@ const BlogCard = ({ data, isAdmin, refetch }) => {
                 }} className='text-rose-500 p-2'><FaTrash size={20} /></button>
             </div>}
 
-            <div className='flex items-center gap-1 text-sky-500 text-sm'>
-                <p>{data.tag}</p>
-                <BsDot className='text-gray-500' />
-                <p className='text-gray-500'>{data.minutes} min read</p>
-            </div>
-            <div className='h-[9rem] rounded flex items-center justify-center overflow-hidden bg-sky-500 my-2'>
-                <img loading='lazy' className='w-auto rounded h-[12rem] bg-cover bg-center' src={data.image} alt="about" />
+            <div className='h-[11rem] rounded-xl flex items-center justify-center overflow-hidden bg-sky-500 -mt-10 -ml-10 mr-2 mb-2'>
+                <img loading='lazy' className='w-auto hover:scale-105 transition-transform delay-75 ease-linear rounded-xl h-[12rem] bg-cover bg-center' src={data.image} alt="about" />
             </div>
             <div>
+                <p className='text-xs font-medium text-sky-500 py-2'>{data.tag}</p>
                 <h3 className='text-base font-semibold text-white'>{data.title}</h3>
-                <p className='text-gray-500 text-xs font-medium leading-5 mt-1'>
-                    {data.body.substring(0, 100) + "..."}
+                <div className='text-sm flex items-center gap-3 py-2.5'>
+                    <p className='font-medium leading-5 mt-1 text-sky-500 text-sm'>{formatDate(data.date)}</p>
+                    <BsDot />
+                    <p className='text-gray-400'>{data.minutes} min</p>
+                </div>
+                <p className='text-gray-400 text-xs font-medium leading-5 mt-1'>
+                    {data.body.substring(0, 140) + "..."}
                 </p>
             </div>
-            <div className='flex items-center gap-2 mt-2'>
+            <div className='flex items-center gap-2 mt-3'>
                 <img loading='lazy' className='w-8 h-8 rounded-full' src={data.authorImage} alt={data.author} />
-                <div className='flex items-center gap-0.5 text-gray-500 text-xs'>
+                <div className='flex items-center justify-between w-full gap-0.5 text-gray-400 text-xs'>
                     <p className='font-semibold text-gray-400 leading-5 mt-1'>{data.author}</p>
-                    <BsDot />
-                    <p className='font-medium leading-5 mt-1'>{data.date}</p>
+                    <Link
+                        style={{
+                            textDecoration: 'none'
+                        }}>
+                        <p className='text-white underline underline-offset-8 decoration-sky-500 text-sm font-semibold'>READ MORE</p>
+                    </Link>
                 </div>
             </div>
         </Link>

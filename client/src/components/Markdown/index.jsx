@@ -8,9 +8,9 @@ import rehypeStringify from 'rehype-stringify'
 import "./unreset.scss"
 import ReactMarkdown from 'react-markdown'
 
-const MarkDown = ({content}) => {
+const MarkDown = ({content,...rest}) => {
     return (
-        <div className='unreset'>
+        <div className='unreset' {...rest}>
             <ReactMarkdown children={content} components={{
                 code({ node, inline, className, children, ...props }) {
                     const match = /language-(\w+)/.exec(className || '')

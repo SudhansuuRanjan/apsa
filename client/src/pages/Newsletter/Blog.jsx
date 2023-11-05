@@ -22,33 +22,39 @@ const Blog = () => {
 
   return (
     <div className='news-container'>
-      {isLoading ? <div className='h-screen flex justify-center items-center'>
+      {isLoading ?
+        <div className='h-screen flex justify-center items-center'>
           <Loader />
-        </div>: isError ? <p>Something went wrong.</p> : <div>
-          <h1 data-aos="fade-up" className='news-topic font-bold text-sky-400'>{data.title}</h1>
-          <div data-aos="fade-up" className='flex items-center justify-center flex-col'>
-            <div className='flex items-center gap-1 text-gray-400 mt-3'>
-              <p>{data.tag}</p>
-              <BsDot />
-              <p>{data.minutes} min read</p>
+        </div> :
+        isError ?
+          <p>Something went wrong.</p> :
+          <div>
+            <div data-aos="fade-up" className="img-container">
+              <img className='blog-header-img' src={data.image + "&quality=40"} alt="header-img" />
             </div>
-            <div className='flex items-center gap-3 mt-4'>
-              <img loading='lazy' className='w-9 h-9 rounded-full' src={data.authorImage} alt={data.author} />
-              <p className='font-semibold text-gray-300'>{data.author}</p>
+            <div className="paragraph-body">
+              <h1 data-aos="fade-up" className='text-3xl font-bold text-sky-400'>{data.title}</h1>
+              <div data-aos="fade-up" className='flex items-center justify-start my-6 gap-4'>
+                <div className='flex items-center gap-3'>
+                  <img loading='lazy' className='w-9 h-9 rounded-full' src={data.authorImage} alt={data.author} />
+                  <span className='font-semibold text-gray-300'>{data.author}</span>
+                </div>
+                <div className='flex items-center gap-1 text-gray-400'>
+                  <span>{data.tag}</span>
+                  <BsDot />
+                  <span>{data.minutes} min read</span>
+                </div>
+              </div>
+              <MarkDown className="unreset mt-16" content={data.body} />
             </div>
           </div>
-          <div data-aos="fade-up" className="img-container">
-            <img className='blog-header-img' src={data.image + "&quality=40"} alt="header-img" />
-          </div>
-          <div className="paragraph-body">
-            <MarkDown content={data.body}/>
-          </div>
-        </div>
       }
+      
       <BackButton to="/news" />
-      {!isLoading && !isError && <div className='share-cont'>
-        <Share topic={data.title} para={data.body} />
-      </div>}
+      {!isLoading && !isError &&
+        <div className='share-cont'>
+          <Share topic={data.title} para={data.body} />
+        </div>}
     </div>
   )
 }

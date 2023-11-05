@@ -1,20 +1,13 @@
 .news-container {
   padding-top: 4rem;
 
-  .news-topic {
-    text-align: center;
-    padding-top: 7rem;
-    font-size: 1.9rem;
-    margin: auto;
-    max-width: 80%;
-  }
-
   .img-container {
     margin: auto;
-    max-width: 60%;
+    max-width: 65%;
     overflow: hidden;
     background-size: cover;
-    margin-top: 2rem;
+    margin-top: 4rem;
+    border-radius: 2rem;
     margin-bottom: 2rem;
   }
 
@@ -28,13 +21,6 @@
     max-width: 65%;
     text-align: justify;
     padding: 2rem 0;
-
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6rem;
-      text-indent: 2rem;
-      margin: 1rem 0;
-    }
   }
 
   .credits {
@@ -64,13 +50,6 @@
     .paragraph-body {
       max-width: 80%;
       padding: 1.5rem 0;
-
-      p {
-        font-size: 1rem;
-        line-height: 1.6rem;
-        text-indent: 2rem;
-        margin: 1rem 0;
-      }
     }
 
     .credits {
@@ -101,13 +80,6 @@
     .paragraph-body {
       max-width: 90%;
       padding: 1rem 0;
-
-      p {
-        font-size: 1rem;
-        line-height: 1.6rem;
-        text-indent: 2rem;
-        margin: 1rem 0;
-      }
     }
 
     .credits {
